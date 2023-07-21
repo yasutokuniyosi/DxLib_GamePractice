@@ -5,8 +5,8 @@
 
 #include "DxLib.h"
 #include "FreamControl.h"
-#include "InptControl.h"
-#include "SceneManarer.h"
+#include "InputControl.h"
+#include "SceneManager.h"
 
 /*****************************************
 *マクロ定義
@@ -44,7 +44,7 @@ int WINAPI WinMain(_In_ HINSTANCE hinstance, _In_opt_ HINSTANCE hPrevInstance, _
 	ChangeWindowMode(TRUE);
 
 	//画面サイズの最大サイズ、カラービット数を設定
-	SetGraphMode(SCEEN_WIDTH, SCREEN_HEIGHT, SCREEN_COLORBIT);
+	SetGraphMode(SCREAN_WIDTH, SCREAN_HEIGHT, SCREAN_COLORBIT);
 
 	//Dxライブラリの初期化処理
 	//エラーが発生したら、終了する
@@ -71,7 +71,7 @@ int WINAPI WinMain(_In_ HINSTANCE hinstance, _In_opt_ HINSTANCE hPrevInstance, _
 	SetDrawScreen(DX_SCREEN_BACK);
 
 	//文字サイズを設定
-	SetFontSaize(FONT_SIZE);
+	SetFontSize(FONT_SIZE);
 
 	//ゲームループ
 	while (ProsessMassage() != D_ERROR && Input_Escape() == FALSE)
@@ -83,7 +83,7 @@ int WINAPI WinMain(_In_ HINSTANCE hinstance, _In_opt_ HINSTANCE hPrevInstance, _
 		SceneManager_Update();
 
 		//画面クリア
-		ClearDrowScreen();
+		ClearDrowScrean();
 
 		//シーンマネージャー描画処理
 		SceneManager_Draw();
