@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup Label="ProjectConfigurations">
     <ProjectConfiguration Include="Debug|Win32">
@@ -21,8 +21,8 @@
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
-    <ProjectGuid>{91c47d6f-c2d5-4c7f-834f-f27fe8e8a000}</ProjectGuid>
-    <RootNamespace>Gamepractice</RootNamespace>
+    <ProjectGuid>{dedf27ab-e11e-45ce-aec1-f6adb3a45769}</ProjectGuid>
+    <RootNamespace>ex011</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -132,17 +132,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="AppMain.cpp" />
-    <ClCompile Include="FreamControl.cpp" />
-    <ClCompile Include="GameClearScene.cpp" />
-    <ClCompile Include="GameMainScene.cpp" />
-    <ClCompile Include="GameOverScene.cpp" />
-    <ClCompile Include="inputControl.cpp" />
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="FreamControl.h" />
-    <ClInclude Include="GameClearScene.h" />
-    <ClInclude Include="GameMainScene.h" />
-    <ClInclude Include="GameOverScene.h" />
+    <ClCompile Include="ソース.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
