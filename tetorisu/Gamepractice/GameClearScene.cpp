@@ -27,14 +27,14 @@ int GameClearFlag;
 * 戻り値：エラー情報
 ******************************************/
 
-int GameClearScene_InitiaLize(void)
+int GameClearScene_Initialize(void)
 {
 	int ret = 0;
 
 	 //画像の読み込み
 	GameClearImage = LoadGraph("images/gameclear.png");
 	 //音源の読み込み
-	GameClearSE = LoadGraph("sounds/gameclear.se.mp3");
+	GameClearSE = LoadSoundMem("sounds/gameclear_se.mp3");
 
 	GameClearFlag = 0;
 

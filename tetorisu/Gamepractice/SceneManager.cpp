@@ -35,33 +35,41 @@ int SceneManager_Initialize(GAME_MODE mode)
 
 	//シーン読み込み処理
 	//タイトル画面
-	Read_Error = TitleScene_Initialize();
-	if (Read_Error == D_ERROR)
+	if (mode == E_TITLE)
 	{
-		return D_ERROR;
+		Read_Error = TitleScene_Initialize();
+		if (Read_Error == D_ERROR)
+		{
+			return D_ERROR;
+		}
 	}
-
 	//ゲームメイン画面
-	Read_Error = GameMainScene_Initialize();
-	if (Read_Error == D_ERROR)
+	if (mode == E_GAMEMAIN)
 	{
-		return D_ERROR;
+		Read_Error = GameMainScene_Initialize();
+		if (Read_Error == D_ERROR)
+		{
+			return D_ERROR;
+		}
 	}
-
 	//ゲームクリア画面
-	Read_Error = GameClearScene_InitiaLize();
-	if (Read_Error == D_ERROR)
+	if (mode == E_GAME_CLEAR)
 	{
-		return D_ERROR;
+		Read_Error = GameClearScene_Initialize();
+		if (Read_Error == D_ERROR)
+		{
+			return D_ERROR;
+		}
 	}
-
 	//ゲームオーバー画面
-	Read_Error = GameOverScene_Initialize();
-	if (Read_Error == D_ERROR)
+	if (mode == E_GAME_OVER)
 	{
-		return D_ERROR;
+		Read_Error = GameOverScene_Initialize();
+		if (Read_Error == D_ERROR)
+		{
+			return D_ERROR;
+		}
 	}
-
 	Game_Mode = mode;
 	Next_Mode = Game_Mode;
 

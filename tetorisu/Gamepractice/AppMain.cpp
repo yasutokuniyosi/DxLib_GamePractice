@@ -33,7 +33,7 @@
 *プログラムの開始
 ******************************************/
 
-int WINAPI WinMain(_In_ HINSTANCE hinstance, _In_opt_ HINSTANCE hPrevInstance, _In_
+int WINAPI WinMain(_In_ HINSTANCE hInstance, _In_opt_ HINSTANCE hPrevInstance, _In_
 	LPSTR lpCmdLine, _In_ int nShowCmd)
 {
 
@@ -74,7 +74,7 @@ int WINAPI WinMain(_In_ HINSTANCE hinstance, _In_opt_ HINSTANCE hPrevInstance, _
 	SetFontSize(FONT_SIZE);
 
 	//ゲームループ
-	while (ProsessMassage() != D_ERROR && Input_Escape() == FALSE)
+	while (ProcessMessage() != D_ERROR && Input_Escape() == FALSE)
 	{
 		//入力制御機能更新処理
 		Input_Update();
@@ -83,7 +83,7 @@ int WINAPI WinMain(_In_ HINSTANCE hinstance, _In_opt_ HINSTANCE hPrevInstance, _
 		SceneManager_Update();
 
 		//画面クリア
-		ClearDrowScrean();
+		ClearDrawScreen();
 
 		//シーンマネージャー描画処理
 		SceneManager_Draw();

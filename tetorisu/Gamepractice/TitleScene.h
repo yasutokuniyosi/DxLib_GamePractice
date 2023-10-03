@@ -8,10 +8,10 @@
 *型定義
 ******************************************/
 
+
 /*****************************************
 *プロトタイプ宣言
 ******************************************/
-
-int GameClearScene_Initialize(void);
-void GameClearScene_Update(void);
-void GameClearScene_Draw(void);
+int TitleScene_Initialize(void);
+void TitleScene_Update(void);
+void TitleScene_Draw(void);

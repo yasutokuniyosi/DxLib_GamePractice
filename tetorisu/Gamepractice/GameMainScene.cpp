@@ -1,12 +1,12 @@
 #include"GameMainScene.h"
 #include "DxLib.h"
 #include"Stage.h"
-#include "SceneManarer.h"
+#include "SceneManager.h"
 
 /*****************************************
 *マクロ定義
 ******************************************/
-#define TIMELIMIT            (3600*3) //制限時間
+#define TIMELIMIT            (4600*3) //制限時間
 #define NUMBER_IMAGE_MAX (10)         //数字画像数
 
 
@@ -51,7 +51,7 @@ int GameMainScene_Initialize(void)
 	ret = StageInitialize();
 
 	//エラーチェック
-	for (i = 0; i < NUMBER_IMAGE_MAX; + i++)
+	for (i = 0; i < NUMBER_IMAGE_MAX; i++)
 	{
 		if (NumberImage[i] == D_ERROR)
 		{
@@ -59,6 +59,8 @@ int GameMainScene_Initialize(void)
 			break;
 		}
 	}
+	
+
 	//ゲームプレイが初回かどうか？
 	if (GameCount == 0)
 	{
@@ -71,8 +73,7 @@ int GameMainScene_Initialize(void)
 	else
 	{
 		GameLevel++;        //ゲームレベルの更新
-		Set_StageMission(3);//ミッションを増やす
-
+		Set_StageMission(3);//ミッションを増やす;
 	}
 	GameTime = TIMELIMIT;   //制限時間の初期化
 
@@ -145,6 +146,7 @@ void GameMainScene_Draw(void)
 		tmp_level /= 10;
 		PosX -= 30;
 	} while (tmp_level > 0);
+
 	//スコアの描画
 	PosX = 620;
 	do {
@@ -152,6 +154,7 @@ void GameMainScene_Draw(void)
 		tmp_score /= 10;
 		PosX -= 20;
 	} while (tmp_score > 0);
+
 	//制限時間の描画
 	DrawBox(491, 469, 509, 469 - GameTime / 60 * 2, 0x0033ff, TRUE);
 
